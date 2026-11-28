@@ -62,6 +62,7 @@ footer{background:#153b63;color:#d8efff;padding:35px 0;text-align:center}footer 
       </div>
     </div>
     <p class="small-note">💡 Siapkan tautan YouTube. Website akan menampilkan video langsung di halaman ini.</p>
+    https://youtu.be/V2z5OoDRmTI?si=NR5XuzjGPbowV77B
   </div>
 </section>
 
@@ -170,14 +171,16 @@ const videoEmbed=youtubeEmbed(VIDEO_URL);
 if(videoEmbed){
   document.getElementById("videoContainer").innerHTML='<iframe src="'+videoEmbed+'" title="Video pembelajaran zona waktu Indonesia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>';
 }
+  <iframe allow="fullscreen; autoplay; allow-top-navigation-by-user-activation" allowfullscreen width="795" height="690" frameborder="0" src="https://www.educaplay.com/game/31618204-pembagian_waktu.html"></iframe>
 if(EDUCPLAY_EMBED_URL){
   document.getElementById("gameContainer").innerHTML='<iframe src="'+EDUCPLAY_EMBED_URL+'" title="Permainan Educaplay zona waktu Indonesia" allowfullscreen loading="lazy"></iframe>';
 }
+  <iframe allow="fullscreen; autoplay; allow-top-navigation-by-user-activation" allowfullscreen width="795" height="690" frameborder="0" src="https://www.educaplay.com/game/31620595-pembagian_zona_waktu_di_indonesia.html"></iframe>
 if(EDUCPLAY_PAGE_URL){
   const gameLink=document.getElementById("openGame");
   gameLink.href=EDUCPLAY_PAGE_URL;gameLink.classList.remove("hidden");
 }
-
+<iframe allow="fullscreen; autoplay; allow-top-navigation-by-user-activation" allowfullscreen width="795" height="690" frameborder="0" src="https://www.educaplay.com/game/31640588-mengenal_zona_waktu_indonesia.html"></iframe>
 /* Menu mobile */
 const hamb=document.getElementById("hamb"), navLinks=document.getElementById("navLinks");
 hamb.addEventListener("click",()=>{const open=navLinks.classList.toggle("open");hamb.setAttribute("aria-expanded",String(open));hamb.textContent=open?"✕":"☰"});
