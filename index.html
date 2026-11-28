@@ -711,54 +711,6 @@ footer p{margin:7px 0 0;font-size:.88rem;color:#b8d5e7}
 </footer>
 
 <script>
- /* ---------- MUSIK DAN EFEK SUARA ---------- */
-let AC, musicOn = true, mi = 0;
-
-function tone(f, d=.15, t='sine', v=.12, delay=0) {
-  try {
-    AC = AC || new (window.AudioContext || window.webkitAudioContext)();
-    const o = AC.createOscillator(), g = AC.createGain();
-    o.type = t;
-    o.frequency.value = f;
-    g.gain.setValueAtTime(v, AC.currentTime + delay);
-    g.gain.exponentialRampToValueAtTime(.001, AC.currentTime + delay + d);
-    o.connect(g);
-    g.connect(AC.destination);
-    o.start(AC.currentTime + delay);
-    o.stop(AC.currentTime + delay + d);
-  } catch(e) {}
-}
-
-const sfx = {
-  click: () => tone(660,.08,'square',.06),
-  ok: () => [523,659,784].forEach((f,i)=>tone(f,.15,'triangle',.15,i*.1)),
-  no: () => {
-    tone(200,.3,'sawtooth',.1);
-    tone(150,.3,'sawtooth',.1,.15);
-  },
-  win: () => [523,659,784,1047,784,1047].forEach((f,i)=>tone(f,.2,'triangle',.15,i*.12))
-};
-
-const mel = [523,587,659,784,880,784,659,587];
-
-setInterval(() => {
-  if (musicOn && AC && AC.state === 'running') {
-    tone(mel[mi%8],.3,'triangle',.04);
-    if (mi%4===0) tone(mel[mi%8]/2,.5,'sine',.04);
-    mi++;
-  }
-},350);
-
-$('#mus').onclick = e => {
-  musicOn = !musicOn;
-  e.target.textContent = musicOn ? '🎵 ON' : '🔇 OFF';
-  sfx.click();
-};
-
-document.addEventListener('click', e => {
-  if (AC && AC.state === 'suspended') AC.resume();
-  if (e.target.closest('button,.card,.chip,.opt')) sfx.click();
-});
 // ======================================
 // MUSIK LATAR BERANDA DAN BAGIAN MATERI
 // Musik dibuat menggunakan Web Audio API.
