@@ -156,6 +156,253 @@ footer p{margin:7px 0 0;font-size:.88rem;color:#b8d5e7}
 @media(prefers-reduced-motion:reduce){
  *,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
 }
+ 
+/* ===== MATERI ZONA WAKTU ===== */
+
+.materi-zona {
+  padding: 75px 20px;
+  background: linear-gradient(135deg, #fff4e9, #f0edff, #e8faff);
+}
+
+.materi-intro {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 45px;
+}
+
+.materi-tag {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 30px;
+  background: #ffe2a8;
+  color: #805000;
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.materi-intro h2 {
+  color: #39316b;
+  font-size: clamp(27px, 4vw, 40px);
+  margin: 18px 0 12px;
+}
+
+.materi-intro p {
+  color: #68647c;
+  line-height: 1.7;
+}
+
+.materi-stat {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.materi-stat div {
+  background: white;
+  padding: 17px 25px;
+  border-radius: 18px;
+  box-shadow: 0 5px 18px #51458b15;
+  min-width: 125px;
+}
+
+.materi-stat strong {
+  display: block;
+  font-size: 27px;
+  color: #7955c7;
+}
+
+.materi-stat span {
+  font-size: 12px;
+  color: #777;
+}
+
+.materi-list {
+  max-width: 1050px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.materi-box {
+  padding: 27px;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px #39316b12;
+  transition: .3s ease;
+  border: 2px solid white;
+}
+
+.materi-box:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 30px #39316b20;
+}
+
+.materi-box.ungu { background: linear-gradient(135deg,#e9ddff,#fff); }
+.materi-box.pink { background: linear-gradient(135deg,#ffe0eb,#fff); }
+.materi-box.biru { background: linear-gradient(135deg,#dcefff,#fff); }
+.materi-box.kuning { background: linear-gradient(135deg,#fff0c8,#fff); }
+.materi-box.hijau {
+  background: linear-gradient(135deg,#dcf7e7,#fff);
+  grid-column: 1 / -1;
+}
+
+.materi-visual {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.materi-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #796b99;
+}
+
+.materi-box h3 {
+  font-size: 21px;
+  color: #39316b;
+  margin: 12px 0;
+  line-height: 1.4;
+}
+
+.materi-box p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #55536a;
+}
+
+.materi-note {
+  padding: 13px;
+  background: #ffffffb8;
+  border-radius: 13px;
+  margin-top: 15px;
+  color: #57506e;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.rotasi-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px;
+  background: #ffffffa8;
+  border-radius: 18px;
+  margin: 15px 0;
+}
+
+.rotasi-bumi, .rotasi-matahari {
+  font-size: 43px;
+}
+
+.rotasi-panah {
+  font-size: 30px;
+  color: #d36c91;
+}
+
+.gmt-visual {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 8px;
+  background: #ffffffb8;
+  border-radius: 18px;
+  padding: 18px 8px;
+  margin-top: 18px;
+  text-align: center;
+}
+
+.gmt-item strong, .gmt-item span, .gmt-item small {
+  display: block;
+  margin: 5px 0;
+}
+
+.gmt-item strong { color: #477cc0; font-size: 19px; }
+.gmt-item span { font-size: 13px; }
+.gmt-item small { font-size: 10px; color: #777; }
+
+.gmt-tengah {
+  font-size: 28px;
+  color: #6553a4;
+}
+
+.gmt-tengah strong {
+  display: block;
+  font-size: 13px;
+}
+
+.zona-mini {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.zona-mini div {
+  text-align: center;
+  background: white;
+  border-radius: 14px;
+  padding: 15px 5px;
+}
+
+.zona-mini strong {
+  display: block;
+  font-size: 19px;
+  color: #55449a;
+}
+
+.zona-mini span {
+  font-size: 12px;
+  color: #777;
+}
+
+.manfaat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 13px;
+  margin-top: 18px;
+}
+
+.manfaat-grid div {
+  background: white;
+  border-radius: 17px;
+  padding: 18px 10px;
+  text-align: center;
+  font-size: 28px;
+}
+
+.manfaat-grid p {
+  font-size: 12px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+@media(max-width:700px) {
+  .materi-list {
+    grid-template-columns: 1fr;
+  }
+
+  .materi-box.hijau {
+    grid-column: auto;
+  }
+
+  .manfaat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .materi-stat {
+    gap: 8px;
+  }
+
+  .materi-stat div {
+    min-width: 95px;
+    padding: 13px 10px;
+  }
+}
+
 </style>
 </head>
 
@@ -181,6 +428,85 @@ footer p{margin:7px 0 0;font-size:.88rem;color:#b8d5e7}
 </button>
 
 <main>
+ 
+<section class="materi-zona" id="materi-lengkap">
+  <div class="container">
+
+    <div class="materi-intro">
+      <span class="materi-tag">📚 RUANG BELAJAR</span>
+      <h2>Petualangan Mengenal Zona Waktu! 🌍</h2>
+      <p>Yuk, pelajari rahasia waktu dan pembagian zona waktu di Indonesia!</p>
+      <div class="materi-stat">
+        <div><strong>24</strong><span>Jam rotasi Bumi</span></div>
+        <div><strong>3</strong><span>Zona waktu Indonesia</span></div>
+        <div><strong>360°</strong><span>Satu putaran</span></div>
+      </div>
+    </div>
+
+    <div class="materi-list">
+
+      <article class="materi-box ungu">
+        <div class="materi-visual">🕒</div>
+        <span class="materi-label">MATERI 01</span>
+        <h3>Pengertian Zona Waktu</h3>
+        <p>Zona waktu adalah wilayah yang memakai jam yang sama. Daerah yang berjauhan pun bisa memiliki jam yang sama jika berada dalam satu zona waktu.</p>
+        <div class="materi-note">✨ Jam yang dipakai dalam satu zona disebut waktu standar.</div>
+      </article>
+
+      <article class="materi-box pink">
+        <div class="materi-visual">🌍</div>
+        <span class="materi-label">MATERI 02</span>
+        <h3>Bumi Berputar (Rotasi)</h3>
+        <p>Bumi berputar pada porosnya dari barat ke timur. Satu kali putaran penuh membutuhkan sekitar 24 jam. Akibatnya terjadi pergantian siang dan malam.</p>
+        <div class="rotasi-visual">
+          <div class="rotasi-bumi">🌍</div>
+          <div class="rotasi-panah">⟲</div>
+          <div class="rotasi-matahari">☀️</div>
+        </div>
+        <div class="materi-note">🌞 Wilayah timur lebih dahulu mengalami pagi hari. Karena itu, waktu Papua lebih cepat daripada Sumatra.</div>
+      </article>
+
+      <article class="materi-box biru">
+        <div class="materi-visual">🧭</div>
+        <span class="materi-label">MATERI 03</span>
+        <h3>Garis Bujur dan Waktu Dunia</h3>
+        <p>Garis bujur adalah garis khayal yang membentang dari Kutub Utara ke Kutub Selatan. Garis bujur 0° melewati Greenwich, Inggris, dan menjadi acuan waktu dunia yang dikenal sebagai GMT.</p>
+        <div class="gmt-visual">
+          <div class="gmt-item"><strong>GMT−</strong><span>⬅️ Barat</span><small>Waktu berkurang</small></div>
+          <div class="gmt-tengah">🌐<strong>GMT 0°</strong></div>
+          <div class="gmt-item"><strong>GMT+</strong><span>Timur ➡️</span><small>Waktu bertambah</small></div>
+        </div>
+      </article>
+
+      <article class="materi-box kuning">
+        <div class="materi-visual">🇮🇩</div>
+        <span class="materi-label">MATERI 04</span>
+        <h3>Mengapa Indonesia Memiliki 3 Zona Waktu?</h3>
+        <p>Indonesia membentang sekitar 5.100 km dari barat ke timur. Akibatnya, waktu matahari terbit di Papua berbeda dengan di Aceh.</p>
+        <p>Jika seluruh Indonesia memakai satu waktu, kegiatan sehari-hari akan kurang sesuai dengan waktu matahari.</p>
+        <div class="zona-mini">
+          <div><strong>WIB</strong><span>UTC+7</span></div>
+          <div><strong>WITA</strong><span>UTC+8</span></div>
+          <div><strong>WIT</strong><span>UTC+9</span></div>
+        </div>
+      </article>
+
+      <article class="materi-box hijau">
+        <div class="materi-visual">⭐</div>
+        <span class="materi-label">MATERI 05</span>
+        <h3>Manfaat Pembagian Zona Waktu</h3>
+        <div class="manfaat-grid">
+          <div>⏰<p>Kegiatan sekolah dan kerja lebih teratur.</p></div>
+          <div>📺<p>Jadwal siaran televisi dan radio lebih jelas.</p></div>
+          <div>✈️<p>Jadwal pesawat, kapal, dan kereta lebih teratur.</p></div>
+          <div>📞<p>Memudahkan komunikasi dan perdagangan.</p></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
 
 <section class="hero" id="beranda">
  <div class="wrap hero-grid">
