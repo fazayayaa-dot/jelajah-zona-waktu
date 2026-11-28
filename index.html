@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -5,301 +6,872 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#1479bd">
 <title>Jelajah Zona Waktu Indonesia</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap');
-:root{--navy:#153b63;--blue:#1688c9;--sky:#dff5ff;--green:#35b77a;--yellow:#ffd65a;--coral:#ff806d;--ink:#24445f;--muted:#668098;--paper:#fff;--bg:#f3fbff;--shadow:0 14px 35px rgba(29,91,130,.12);--radius:24px}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;font-family:'Nunito',sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}button,a{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,92%);margin:auto}
-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);box-shadow:0 4px 20px rgba(30,83,120,.08)}
-.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:10px;font:800 1.15rem 'Baloo 2';color:var(--navy)}.brand-mark{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--blue),#65c8e9);display:grid;place-items:center;color:white;font-size:1.4rem;box-shadow:0 7px 15px #1688c944}.links{display:flex;align-items:center;gap:5px}.links a{font-size:.88rem;font-weight:800;padding:10px 12px;border-radius:12px;color:#52718a;transition:.2s}.links a:hover,.links a.active{background:#e7f6ff;color:var(--blue)}.hamb{display:none;border:0;background:#e9f7ff;border-radius:12px;padding:9px 12px;font-size:1.3rem;color:var(--navy)}
-.hero{position:relative;overflow:hidden;padding:76px 0 80px;background:linear-gradient(125deg,#dff5ff 0%,#e9fff5 58%,#fff6d8 100%)}.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;background:#fff8;filter:blur(1px)}.hero:before{width:240px;height:90px;top:50px;right:6%}.hero:after{width:170px;height:65px;bottom:40px;left:2%}.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:35px}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:#fff;border-radius:999px;color:#2485b8;font-weight:900;font-size:.82rem;box-shadow:var(--shadow)}h1,h2,h3{font-family:'Baloo 2',sans-serif;line-height:1.12;margin:0;color:var(--navy)}h1{font-size:clamp(2.7rem,5vw,4.7rem);margin:18px 0}.hero h1 span{color:var(--blue)}.hero p{font-size:1.12rem;max-width:560px;color:#55738a}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:15px;padding:13px 22px;font-weight:900;transition:transform .2s,box-shadow .2s;background:var(--blue);color:white;box-shadow:0 8px 18px #1688c944}.btn:hover{transform:translateY(-3px) scale(1.025);box-shadow:0 12px 22px #1688c944}.btn.secondary{background:white;color:var(--blue);box-shadow:var(--shadow);border:1px solid #d9effa}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.hero-art{min-height:330px;position:relative;display:grid;place-items:center}.globe{width:min(340px,85%);aspect-ratio:1;border-radius:50%;background:linear-gradient(145deg,#6dd4f2,#1688c9);box-shadow:inset -18px -20px 35px #075b9a55,0 25px 45px #1c81ad33;display:grid;place-items:center;font-size:8rem;position:relative}.globe:after{content:"";position:absolute;inset:13px;border:2px dashed #ffffff88;border-radius:50%}.float{position:absolute;font-size:2.5rem;animation:bob 3s ease-in-out infinite}.f1{top:15px;left:12%}.f2{right:4%;top:25%}.f3{bottom:8px;right:17%;animation-delay:.7s}.f4{bottom:25%;left:2%;animation-delay:1.1s}@keyframes bob{50%{transform:translateY(-12px) rotate(5deg)}}
-section{padding:76px 0}.section-head{text-align:center;max-width:720px;margin:0 auto 34px}.kicker{color:var(--green);font-weight:900;text-transform:uppercase;letter-spacing:1.5px;font-size:.76rem}.section-head h2{font-size:clamp(2rem,4vw,3rem);margin:8px 0 12px}.section-head p{color:var(--muted);margin:0}.panel{background:white;border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);border:1px solid #e7f3fa}.video-section{background:#fff}.video-box{max-width:850px;margin:auto;background:#102f4b;padding:12px;border-radius:24px;box-shadow:var(--shadow)}.video-frame{width:100%;aspect-ratio:16/9;border:0;border-radius:16px;background:linear-gradient(135deg,#dff5ff,#f2fff8);display:grid;place-items:center;color:var(--muted);text-align:center;padding:20px}.video-frame iframe{width:100%;height:100%;border:0;border-radius:16px}.placeholder-icon{font-size:3rem}.small-note{text-align:center;color:var(--muted);font-size:.88rem;margin:14px 0 0}
-.lesson-intro{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:26px}.mini-card{padding:22px;border-radius:20px;background:white;box-shadow:var(--shadow);border:1px solid #e9f3f8}.mini-card .emoji{font-size:2rem}.mini-card h3{font-size:1.25rem;margin:8px 0}.mini-card p{margin:0;color:var(--muted);font-size:.94rem}
-.zone-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.zone{border-radius:24px;padding:24px;color:white;position:relative;overflow:hidden;box-shadow:var(--shadow);transition:.25s}.zone:hover{transform:translateY(-6px)}.zone:after{content:"";position:absolute;width:140px;height:140px;border:22px solid #ffffff22;border-radius:50%;right:-35px;top:-45px}.zone.wib{background:linear-gradient(145deg,#2388d0,#1465ad)}.zone.wita{background:linear-gradient(145deg,#30bd91,#168b77)}.zone.wit{background:linear-gradient(145deg,#f4b93e,#ee8b38)}.zone h3{color:white;font-size:2rem}.zone .utc{font-weight:900;opacity:.9}.zone .zone-clock{font:800 2rem 'Baloo 2';margin:12px 0 4px;letter-spacing:1px}.zone p{margin:5px 0;font-size:.92rem}.zone strong{display:block;margin-top:12px}
-.map-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:stretch;margin-top:32px}.map-panel{background:linear-gradient(145deg,#e4f7ff,#f5fffa);border-radius:24px;padding:22px;border:1px solid #d9edf5}.map-panel h3,.info-panel h3{font-size:1.45rem;margin-bottom:8px}.map-schematic{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:20px 0}.map-zone{border-radius:18px;padding:15px 10px;text-align:center;color:white;min-height:145px;display:flex;flex-direction:column;justify-content:center;gap:7px}.map-zone b{font:800 1.3rem 'Baloo 2'}.map-zone span{font-size:.82rem;font-weight:800}.map-zone.wib{background:#2388d0}.map-zone.wita{background:#28a982}.map-zone.wit{background:#eea83b}.map-caption{font-size:.78rem;color:#668098;margin:0}.info-panel{background:white;border-radius:24px;padding:22px;box-shadow:var(--shadow)}.province-select{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:16px 0}.province-btn{border:1px solid #dcecf4;background:#f8fcff;color:#45647c;border-radius:12px;padding:10px 9px;font-weight:800;font-size:.83rem;text-align:left;transition:.2s}.province-btn:hover,.province-btn.selected{background:#e2f5ff;border-color:var(--blue);color:#116da8;transform:translateY(-2px)}.result-box{background:#f1faff;border-radius:16px;padding:16px;min-height:112px;border-left:5px solid var(--blue)}.result-box h4{margin:0 0 4px;color:var(--navy);font:800 1.15rem 'Baloo 2'}.result-box p{margin:3px 0;color:#5c788d;font-size:.9rem}.legend{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;font-size:.8rem;font-weight:800}.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px}
-.example{margin-top:25px;background:#fff9e6;border:1px solid #f8e7ae;border-radius:20px;padding:20px;display:flex;gap:14px;align-items:flex-start}.example .emoji{font-size:2rem}.example p{margin:5px 0 0;color:#6f674e}
-.game-section{background:#fff}.embed-shell{background:#f2f9ff;border:2px dashed #b7d9eb;border-radius:22px;padding:14px}.embed-shell iframe{width:100%;height:500px;border:0;border-radius:14px;background:white}.embed-placeholder{min-height:260px;display:grid;place-items:center;text-align:center;padding:25px;color:#668098}.embed-placeholder .big{font-size:3rem}.embed-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:16px}
-.quiz-wrap{max-width:800px;margin:auto}.quiz-card{background:white;border-radius:26px;padding:clamp(20px,4vw,36px);box-shadow:var(--shadow);border:1px solid #e5f1f7}.quiz-top{display:flex;justify-content:space-between;gap:10px;align-items:center;font-weight:900;color:#6b879b}.progress{height:10px;border-radius:99px;background:#e8f2f7;overflow:hidden;margin:14px 0 24px}.progress-bar{height:100%;width:0;background:linear-gradient(90deg,#28b98c,#1688c9);border-radius:99px;transition:width .3s}.question{font:800 clamp(1.25rem,3vw,1.65rem) 'Baloo 2';color:var(--navy);margin-bottom:20px}.answers{display:grid;grid-template-columns:1fr 1fr;gap:12px}.answer{border:2px solid #e3eef4;background:#fbfdff;border-radius:15px;padding:14px;text-align:left;font-weight:800;color:#45647b;transition:.2s}.answer:hover:not(:disabled){border-color:#7dc8e8;background:#effaff;transform:translateY(-2px)}.answer.correct{border-color:#27b77d;background:#e7fff4;color:#16744e}.answer.wrong{border-color:#f07c70;background:#fff0ed;color:#b34c42}.answer:disabled{cursor:default}.feedback{min-height:30px;font-weight:900;margin:15px 0 5px}.quiz-controls{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:15px}.quiz-result{text-align:center;padding:20px}.score-circle{width:150px;height:150px;border-radius:50%;margin:15px auto;background:linear-gradient(145deg,#dff8ed,#dff4ff);display:grid;place-items:center;border:9px solid white;box-shadow:var(--shadow);font:800 2.5rem 'Baloo 2';color:#1688a1}.hidden{display:none!important}
-footer{background:#153b63;color:#d8efff;padding:35px 0;text-align:center}footer strong{font:800 1.25rem 'Baloo 2';color:white}footer p{margin:7px 0 0;font-size:.88rem;color:#b8d5e7}
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s,transform .65s}.reveal.visible{opacity:1;transform:none}
-@media(max-width:850px){.links{display:none;position:absolute;top:76px;left:0;right:0;background:white;padding:12px 4%;box-shadow:0 12px 18px #1d5b8218;flex-direction:column;align-items:stretch}.links.open{display:flex}.links a{padding:12px}.hamb{display:block}.hero-grid{grid-template-columns:1fr;text-align:center}.hero p{margin-inline:auto}.hero-actions{justify-content:center}.hero-art{min-height:270px}.globe{width:260px;font-size:6rem}.map-layout{grid-template-columns:1fr}}
-@media(max-width:620px){section{padding:55px 0}.hero{padding:55px 0}.lesson-intro,.zone-grid{grid-template-columns:1fr}.map-schematic{grid-template-columns:1fr}.map-zone{min-height:100px}.answers{grid-template-columns:1fr}.nav{height:68px}.links{top:68px}.brand{font-size:1rem}.brand-mark{width:38px;height:38px}.hero-art{min-height:230px}.globe{width:220px}.province-select{grid-template-columns:1fr 1fr}.embed-shell iframe{height:420px}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+:root{
+ --navy:#153b63;--blue:#1688c9;--sky:#dff5ff;
+ --green:#35b77a;--yellow:#ffd65a;--coral:#ff806d;
+ --ink:#24445f;--muted:#668098;--paper:#fff;
+ --bg:#f3fbff;--shadow:0 14px 35px rgba(29,91,130,.12);
+ --radius:24px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;font-family:'Nunito',sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+button,a{font:inherit}
+button{cursor:pointer}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:50;background:#ffffffed;backdrop-filter:blur(12px);box-shadow:0 4px 20px #1e537014}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;font:800 1.15rem 'Baloo 2';color:var(--navy)}
+.brand-mark{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--blue),#65c8e9);display:grid;place-items:center;color:white;font-size:1.4rem}
+.links{display:flex;align-items:center;gap:5px}
+.links a{font-size:.88rem;font-weight:800;padding:10px 12px;border-radius:12px;color:#52718a}
+.links a:hover,.links a.active{background:#e7f6ff;color:var(--blue)}
+.hamb{display:none;border:0;background:#e9f7ff;border-radius:12px;padding:9px 12px;font-size:1.3rem;color:var(--navy)}
+.music-toggle{position:fixed;z-index:100;right:18px;bottom:18px;border:0;border-radius:50px;padding:13px 19px;background:linear-gradient(135deg,#1688c9,#28b98c);color:white;font-weight:900;box-shadow:0 8px 24px #1688c955}
+.music-toggle small{display:block;font-size:.68rem;font-weight:700;opacity:.9}
+.hero{position:relative;overflow:hidden;padding:76px 0 80px;background:linear-gradient(125deg,#dff5ff,#e9fff5 58%,#fff6d8)}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;background:#fff8}
+.hero:before{width:240px;height:90px;top:50px;right:6%}
+.hero:after{width:170px;height:65px;bottom:40px;left:2%}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:35px}
+.eyebrow{display:inline-flex;padding:8px 14px;background:white;border-radius:999px;color:#2485b8;font-weight:900;font-size:.82rem;box-shadow:var(--shadow)}
+h1,h2,h3{font-family:'Baloo 2',sans-serif;line-height:1.12;margin:0;color:var(--navy)}
+h1{font-size:clamp(2.7rem,5vw,4.7rem);margin:18px 0}
+.hero h1 span{color:var(--blue)}
+.hero p{font-size:1.12rem;max-width:560px;color:#55738a}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:15px;padding:13px 22px;font-weight:900;background:var(--blue);color:white;box-shadow:0 8px 18px #1688c944;transition:.2s}
+.btn:hover{transform:translateY(-3px)}
+.btn.secondary{background:white;color:var(--blue);box-shadow:var(--shadow);border:1px solid #d9effa}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.hero-art{min-height:330px;position:relative;display:grid;place-items:center}
+.globe{width:min(340px,85%);aspect-ratio:1;border-radius:50%;background:linear-gradient(145deg,#6dd4f2,#1688c9);box-shadow:inset -18px -20px 35px #075b9a55,0 25px 45px #1c81ad33;display:grid;place-items:center;font-size:8rem;position:relative}
+.globe:after{content:"";position:absolute;inset:13px;border:2px dashed #ffffff88;border-radius:50%}
+.float{position:absolute;font-size:2.5rem;animation:bob 3s ease-in-out infinite}
+.f1{top:15px;left:12%}.f2{right:4%;top:25%}.f3{bottom:8px;right:17%}.f4{bottom:25%;left:2%}
+@keyframes bob{50%{transform:translateY(-12px) rotate(5deg)}}
+section{padding:76px 0}
+.section-head{text-align:center;max-width:720px;margin:0 auto 34px}
+.kicker{color:var(--green);font-weight:900;text-transform:uppercase;letter-spacing:1.5px;font-size:.76rem}
+.section-head h2{font-size:clamp(2rem,4vw,3rem);margin:8px 0 12px}
+.section-head p{color:var(--muted);margin:0}
+.panel{background:white;border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);border:1px solid #e7f3fa}
+.video-section,.game-section{background:white}
+.video-box{max-width:850px;margin:auto;background:#102f4b;padding:12px;border-radius:24px;box-shadow:var(--shadow)}
+.video-frame{width:100%;aspect-ratio:16/9;border:0;border-radius:16px;background:#dff5ff}
+.video-frame iframe{width:100%;height:100%;border:0;border-radius:16px}
+.small-note{text-align:center;color:var(--muted);font-size:.88rem;margin:14px 0 0}
+.lesson-intro{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:26px}
+.mini-card{padding:22px;border-radius:20px;background:white;box-shadow:var(--shadow);border:1px solid #e9f3f8}
+.mini-card .emoji{font-size:2rem}
+.mini-card h3{font-size:1.25rem;margin:8px 0}
+.mini-card p{margin:0;color:var(--muted);font-size:.94rem}
+.zone-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.zone{border-radius:24px;padding:24px;color:white;position:relative;overflow:hidden;box-shadow:var(--shadow);transition:.25s}
+.zone:hover{transform:translateY(-6px)}
+.zone:after{content:"";position:absolute;width:140px;height:140px;border:22px solid #ffffff22;border-radius:50%;right:-35px;top:-45px}
+.zone.wib{background:linear-gradient(145deg,#2388d0,#1465ad)}
+.zone.wita{background:linear-gradient(145deg,#30bd91,#168b77)}
+.zone.wit{background:linear-gradient(145deg,#f4b93e,#ee8b38)}
+.zone h3{color:white;font-size:2rem}
+.zone .utc{font-weight:900;opacity:.9}
+.zone-clock{font:800 2rem 'Baloo 2';margin:12px 0 4px;letter-spacing:1px}
+.zone p{margin:5px 0;font-size:.92rem}
+.zone strong{display:block;margin-top:12px}
+.map-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;margin-top:32px}
+.map-panel{background:linear-gradient(145deg,#e4f7ff,#f5fffa);border-radius:24px;padding:22px;border:1px solid #d9edf5}
+.map-panel h3,.info-panel h3{font-size:1.45rem;margin-bottom:8px}
+.map-svg{width:100%;height:auto;display:block;margin:15px auto}
+.map-svg path{stroke:white;stroke-width:2.5;stroke-linejoin:round;transition:.2s}
+.map-svg path:hover{filter:brightness(1.12);stroke:#153b63;stroke-width:4}
+.map-svg .wib-map{fill:#2388d0}
+.map-svg .wita-map{fill:#28a982}
+.map-svg .wit-map{fill:#eea83b}
+.map-svg text{font-family:'Nunito',sans-serif;font-weight:900;fill:#153b63;stroke:white;stroke-width:3px;paint-order:stroke;pointer-events:none}
+.map-caption{font-size:.78rem;color:#668098;margin:0}
+.legend{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;font-size:.8rem;font-weight:800}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px}
+.info-panel{background:white;border-radius:24px;padding:22px;box-shadow:var(--shadow)}
+.province-select{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:16px 0;max-height:390px;overflow-y:auto;padding:2px}
+.province-btn{border:1px solid #dcecf4;background:#f8fcff;color:#45647c;border-radius:12px;padding:10px 9px;font-weight:800;font-size:.83rem;text-align:left;transition:.2s}
+.province-btn:hover,.province-btn.selected{background:#e2f5ff;border-color:var(--blue);color:#116da8;transform:translateY(-2px)}
+.result-box{background:#f1faff;border-radius:16px;padding:16px;min-height:112px;border-left:5px solid var(--blue)}
+.result-box h4{margin:0 0 4px;color:var(--navy);font:800 1.15rem 'Baloo 2'}
+.result-box p{margin:3px 0;color:#5c788d;font-size:.9rem}
+.example{margin-top:25px;background:#fff9e6;border:1px solid #f8e7ae;border-radius:20px;padding:20px;display:flex;gap:14px}
+.example .emoji{font-size:2rem}
+.example p{margin:5px 0 0;color:#6f674e}
+.game-list{display:grid;grid-template-columns:1fr;gap:25px}
+.game-card{background:#fff;border:1px solid #e1eff6;border-radius:22px;padding:18px;box-shadow:var(--shadow)}
+.game-card h3{font-size:1.35rem;margin:0 0 12px}
+.game-card iframe{width:100%;height:540px;border:0;border-radius:14px;background:#f2f9ff}
+.game-number{display:inline-grid;place-items:center;width:35px;height:35px;border-radius:12px;background:#e4f7ff;color:#1688c9;margin-right:8px}
+.quiz-wrap{max-width:800px;margin:auto}
+.quiz-card{background:white;border-radius:26px;padding:clamp(20px,4vw,36px);box-shadow:var(--shadow);border:1px solid #e5f1f7}
+.quiz-top{display:flex;justify-content:space-between;gap:10px;font-weight:900;color:#6b879b}
+.progress{height:10px;border-radius:99px;background:#e8f2f7;overflow:hidden;margin:14px 0 24px}
+.progress-bar{height:100%;width:0;background:linear-gradient(90deg,#28b98c,#1688c9);border-radius:99px;transition:width .3s}
+.question{font:800 clamp(1.25rem,3vw,1.65rem) 'Baloo 2';color:var(--navy);margin-bottom:20px}
+.answers{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.answer{border:2px solid #e3eef4;background:#fbfdff;border-radius:15px;padding:14px;text-align:left;font-weight:800;color:#45647b;transition:.2s}
+.answer:hover:not(:disabled){border-color:#7dc8e8;background:#effaff;transform:translateY(-2px)}
+.answer.correct{border-color:#27b77d;background:#e7fff4;color:#16744e}
+.answer.wrong{border-color:#f07c70;background:#fff0ed;color:#b34c42}
+.answer:disabled{cursor:default}
+.feedback{min-height:30px;font-weight:900;margin:15px 0 5px}
+.quiz-controls{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:15px}
+.quiz-result{text-align:center;padding:20px}
+.score-circle{width:150px;height:150px;border-radius:50%;margin:15px auto;background:linear-gradient(145deg,#dff8ed,#dff4ff);display:grid;place-items:center;border:9px solid white;box-shadow:var(--shadow);font:800 2.5rem 'Baloo 2';color:#1688a1}
+.hidden{display:none!important}
+footer{background:#153b63;color:#d8efff;padding:35px 0;text-align:center}
+footer strong{font:800 1.25rem 'Baloo 2';color:white}
+footer p{margin:7px 0 0;font-size:.88rem;color:#b8d5e7}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s,transform .65s}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:850px){
+ .links{display:none;position:absolute;top:76px;left:0;right:0;background:white;padding:12px 4%;box-shadow:0 12px 18px #1d5b8218;flex-direction:column;align-items:stretch}
+ .links.open{display:flex}.links a{padding:12px}.hamb{display:block}
+ .hero-grid{grid-template-columns:1fr;text-align:center}
+ .hero p{margin-inline:auto}.hero-actions{justify-content:center}
+ .hero-art{min-height:270px}.globe{width:260px;font-size:6rem}
+ .map-layout{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+ section{padding:55px 0}.hero{padding:55px 0}
+ .lesson-intro,.zone-grid{grid-template-columns:1fr}
+ .answers{grid-template-columns:1fr}
+ .nav{height:68px}.links{top:68px}
+ .brand{font-size:1rem}.brand-mark{width:38px;height:38px}
+ .hero-art{min-height:230px}.globe{width:220px}
+ .province-select{grid-template-columns:1fr 1fr}
+ .game-card iframe{height:430px}
+ .music-toggle{right:12px;bottom:12px}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
+}
 </style>
 </head>
+
 <body>
+
 <header>
-  <div class="wrap nav">
-    <a class="brand" href="#beranda"><span class="brand-mark">🧭</span> JELAJAH ZONA WAKTU</a>
-    <nav class="links" id="navLinks">
-      <a href="#beranda">Beranda</a><a href="#video">Video</a><a href="#materi">Materi & Peta</a><a href="#game">Game</a><a href="#kuis">Kuis</a>
-    </nav>
-    <button class="hamb" id="hamb" aria-label="Buka menu" aria-expanded="false">☰</button>
-  </div>
+ <div class="wrap nav">
+  <a class="brand" href="#beranda"><span class="brand-mark">🧭</span> JELAJAH ZONA WAKTU</a>
+  <nav class="links" id="navLinks">
+   <a href="#beranda">Beranda</a>
+   <a href="#video">Video</a>
+   <a href="#materi">Materi & Peta</a>
+   <a href="#game">Game</a>
+   <a href="#kuis">Kuis</a>
+  </nav>
+  <button class="hamb" id="hamb" aria-label="Buka menu" aria-expanded="false">☰</button>
+ </div>
 </header>
 
+<button class="music-toggle" id="musicToggle" type="button">
+ 🎵 Musik OFF
+ <small>Tekan untuk menyalakan</small>
+</button>
+
 <main>
+
 <section class="hero" id="beranda">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="eyebrow">🌏 PETUALANGAN BELAJAR DIMULAI!</span>
-      <h1>Jelajah <span>Zona Waktu</span> Indonesia</h1>
-      <p>Ayo berpetualang mengenal WIB, WITA, dan WIT! Temukan wilayahnya, lihat perbedaan waktunya, lalu uji pengetahuanmu lewat permainan dan kuis.</p>
-      <div class="hero-actions"><a class="btn" href="#materi">🚀 Mulai Belajar</a><a class="btn secondary" href="#video">▶ Tonton Video</a></div>
-    </div>
-    <div class="hero-art" aria-label="Ilustrasi bumi dan petualangan">
-      <span class="float f1">☁️</span><span class="float f2">☀️</span><span class="float f3">✈️</span><span class="float f4">⭐</span>
-      <div class="globe">🌏</div>
-    </div>
+ <div class="wrap hero-grid">
+  <div>
+   <span class="eyebrow">🌏 PETUALANGAN BELAJAR DIMULAI!</span>
+   <h1>Jelajah <span>Zona Waktu</span> Indonesia</h1>
+   <p>Ayo berpetualang mengenal WIB, WITA, dan WIT! Temukan wilayahnya, lihat perbedaan waktunya, lalu uji pengetahuanmu lewat permainan dan kuis.</p>
+   <div class="hero-actions">
+    <a class="btn" href="#materi">🚀 Mulai Belajar</a>
+    <a class="btn secondary" href="#video">▶ Tonton Video</a>
+   </div>
   </div>
+  <div class="hero-art">
+   <span class="float f1">☁️</span>
+   <span class="float f2">☀️</span>
+   <span class="float f3">✈️</span>
+   <span class="float f4">⭐</span>
+   <div class="globe">🌏</div>
+  </div>
+ </div>
 </section>
 
 <section class="video-section" id="video">
-  <div class="wrap">
-    <div class="section-head reveal"><span class="kicker">Ayo menyimak</span><h2>🎬 Video Pembelajaran</h2><p>Saksikan video berikut untuk mengenal pembagian zona waktu di Indonesia dengan lebih mudah.</p></div>
-    <div class="video-box reveal">
-      <div class="video-frame" id="<iframe
-src="https://www.youtube.com/embed/https://youtu.be/V2z5OoDRmTI?si=NR5XuzjGPbowV77B"
-title="Video Pembelajaran Zona Waktu Indonesia"
-allowfullscreen>
-</iframe>">
-        <div><div class="placeholder-icon">📺</div><strong>Video pembelajaran kelompok akan ditampilkan di sini.</strong><p>Ganti tautan video pada bagian VIDEO_URL di dalam kode index.html.</p></div>
-      </div>
-    </div>
-    <p class="small-note">💡 Siapkan tautan YouTube. Website akan menampilkan video langsung di halaman ini.</p>
+ <div class="wrap">
+  <div class="section-head reveal">
+   <span class="kicker">Ayo menyimak</span>
+   <h2>🎬 Video Pembelajaran</h2>
+   <p>Saksikan video berikut untuk mengenal pembagian zona waktu di Indonesia dengan lebih mudah.</p>
   </div>
+  <div class="video-box reveal">
+   <div class="video-frame">
+    <iframe
+     src="https://www.youtube-nocookie.com/embed/V2z5OoDRmTI"
+     title="Video pembelajaran zona waktu Indonesia"
+     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+     allowfullscreen loading="lazy">
+    </iframe>
+   </div>
+  </div>
+  <p class="small-note">📺 Selamat menyimak video pembelajaran!</p>
+ </div>
 </section>
 
 <section id="materi">
-  <div class="wrap">
-    <div class="section-head reveal"><span class="kicker">Kenali perbedaan waktunya</span><h2>⏰ Yuk, Kenali Tiga Zona Waktu!</h2><p>Zona waktu adalah pembagian wilayah di bumi yang menggunakan waktu standar tertentu. Indonesia memiliki tiga zona waktu karena wilayahnya membentang luas dari barat ke timur.</p></div>
-    <div class="lesson-intro">
-      <article class="mini-card reveal"><div class="emoji">🌍</div><h3>Apa itu zona waktu?</h3><p>Zona waktu adalah wilayah yang memiliki waktu resmi yang sama. Wilayah yang berbeda zona bisa menunjukkan jam yang berbeda.</p></article>
-      <article class="mini-card reveal"><div class="emoji">➡️</div><h3>Mengapa ada tiga?</h3><p>Indonesia membentang jauh dari barat ke timur. Karena itu, waktu di beberapa wilayah perlu dibagi menjadi tiga zona.</p></article>
-      <article class="mini-card reveal"><div class="emoji">🕒</div><h3>Bagaimana selisihnya?</h3><p>WITA satu jam lebih cepat dari WIB. WIT dua jam lebih cepat dari WIB dan satu jam lebih cepat dari WITA.</p></article>
-    </div>
-    <div class="zone-grid">
-      <article class="zone wib reveal"><div style="font-size:2rem">🌅</div><h3>WIB</h3><div class="utc">Waktu Indonesia Barat · UTC+7</div><div class="zone-clock" id="clockWIB">--:--:--</div><p>Contoh kota: Jakarta</p><strong>Wilayah:</strong><p>Sumatra, Jawa, Madura, Kalimantan Barat, dan Kalimantan Tengah.</p></article>
-      <article class="zone wita reveal"><div style="font-size:2rem">🌤️</div><h3>WITA</h3><div class="utc">Waktu Indonesia Tengah · UTC+8</div><div class="zone-clock" id="clockWITA">--:--:--</div><p>Contoh kota: Makassar</p><strong>Wilayah:</strong><p>Bali, Nusa Tenggara, Kalimantan Selatan, Kalimantan Timur, Kalimantan Utara, dan Sulawesi.</p></article>
-      <article class="zone wit reveal"><div style="font-size:2rem">🌇</div><h3>WIT</h3><div class="utc">Waktu Indonesia Timur · UTC+9</div><div class="zone-clock" id="clockWIT">--:--:--</div><p>Contoh kota: Jayapura</p><strong>Wilayah:</strong><p>Maluku, Maluku Utara, dan wilayah Papua.</p></article>
-    </div>
-
-    <div class="map-layout">
-      <div class="map-panel reveal">
-        <h3>🗺️ Peta Zona Waktu Indonesia</h3>
-        <p style="margin:0;color:#668098;font-size:.9rem">Diagram wilayah berikut membantu membandingkan zona waktu dari barat ke timur. Pilih provinsi di samping untuk melihat informasinya.</p>
-        <div class="map-schematic" role="img" aria-label="Diagram skematis tiga zona waktu Indonesia dari barat ke timur">
-          <div class="map-zone wib"><b>WIB</b><span>BARAT</span><span>Sumatra · Jawa · Kalimantan Barat & Tengah</span></div>
-          <div class="map-zone wita"><b>WITA</b><span>TENGAH</span><span>Bali · Nusa Tenggara · Sulawesi · sebagian Kalimantan</span></div>
-          <div class="map-zone wit"><b>WIT</b><span>TIMUR</span><span>Maluku · Papua</span></div>
-        </div>
-        <p class="map-caption">Catatan: ini diagram skematis pembagian zona waktu, bukan peta batas geografis berskala. Pilih provinsi untuk melihat zona waktu yang tepat.</p>
-        <div class="legend"><span><i class="dot" style="background:#2388d0"></i>WIB</span><span><i class="dot" style="background:#28a982"></i>WITA</span><span><i class="dot" style="background:#eea83b"></i>WIT</span></div>
-      </div>
-      <div class="info-panel reveal">
-        <h3>📍 Pilih Provinsi</h3>
-        <p style="margin:0;color:#668098;font-size:.9rem">Ketuk salah satu provinsi untuk mengetahui zona waktunya.</p>
-        <div class="province-select" id="provinceButtons"></div>
-        <div class="result-box" id="provinceResult" aria-live="polite"><h4>Halo, penjelajah!</h4><p>Pilih provinsi untuk melihat informasi zona waktunya.</p></div>
-      </div>
-    </div>
-    <div class="example reveal"><div class="emoji">💡</div><div><strong>Contoh dalam kehidupan sehari-hari</strong><p>Jika di Jakarta (WIB) pukul 07.00, maka di Makassar (WITA) pukul 08.00 dan di Jayapura (WIT) pukul 09.00. Jadi, semakin ke timur, waktunya semakin cepat.</p></div></div>
+ <div class="wrap">
+  <div class="section-head reveal">
+   <span class="kicker">Kenali perbedaan waktunya</span>
+   <h2>⏰ Yuk, Kenali Tiga Zona Waktu!</h2>
+   <p>Zona waktu adalah pembagian wilayah di bumi yang menggunakan waktu standar tertentu. Indonesia memiliki tiga zona waktu karena wilayahnya membentang luas dari barat ke timur.</p>
   </div>
+
+  <div class="lesson-intro">
+   <article class="mini-card reveal">
+    <div class="emoji">🌍</div><h3>Apa itu zona waktu?</h3>
+    <p>Zona waktu adalah wilayah yang memiliki waktu resmi yang sama. Wilayah yang berbeda zona bisa menunjukkan jam yang berbeda.</p>
+   </article>
+   <article class="mini-card reveal">
+    <div class="emoji">➡️</div><h3>Mengapa ada tiga?</h3>
+    <p>Indonesia membentang jauh dari barat ke timur. Karena itu, waktu di beberapa wilayah dibagi menjadi tiga zona.</p>
+   </article>
+   <article class="mini-card reveal">
+    <div class="emoji">🕒</div><h3>Bagaimana selisihnya?</h3>
+    <p>WITA satu jam lebih cepat dari WIB. WIT dua jam lebih cepat dari WIB dan satu jam lebih cepat dari WITA.</p>
+   </article>
+  </div>
+
+  <div class="zone-grid">
+   <article class="zone wib reveal">
+    <div style="font-size:2rem">🌅</div><h3>WIB</h3>
+    <div class="utc">Waktu Indonesia Barat · UTC+7</div>
+    <div class="zone-clock" id="clockWIB">--:--:--</div>
+    <p>Contoh kota: Jakarta</p><strong>Wilayah:</strong>
+    <p>Sumatra, Jawa, Madura, Kalimantan Barat, dan Kalimantan Tengah.</p>
+   </article>
+   <article class="zone wita reveal">
+    <div style="font-size:2rem">🌤️</div><h3>WITA</h3>
+    <div class="utc">Waktu Indonesia Tengah · UTC+8</div>
+    <div class="zone-clock" id="clockWITA">--:--:--</div>
+    <p>Contoh kota: Makassar</p><strong>Wilayah:</strong>
+    <p>Bali, Nusa Tenggara, sebagian Kalimantan, dan Sulawesi.</p>
+   </article>
+   <article class="zone wit reveal">
+    <div style="font-size:2rem">🌇</div><h3>WIT</h3>
+    <div class="utc">Waktu Indonesia Timur · UTC+9</div>
+    <div class="zone-clock" id="clockWIT">--:--:--</div>
+    <p>Contoh kota: Jayapura</p><strong>Wilayah:</strong>
+    <p>Maluku, Maluku Utara, dan seluruh wilayah Papua.</p>
+   </article>
+  </div>
+
+  <div class="map-layout">
+   <div class="map-panel reveal">
+    <h3>🗺️ Peta Indonesia Tiga Zona Waktu</h3>
+    <p style="margin:0;color:#668098;font-size:.9rem">Kenali persebaran tiga zona waktu Indonesia melalui ilustrasi peta berwarna berikut!</p>
+
+    <!-- Peta ilustrasi kepulauan Indonesia. Bentuk pulau disederhanakan. -->
+    <svg class="map-svg" viewBox="0 0 650 390" role="img" aria-label="Ilustrasi peta Indonesia dengan tiga zona waktu">
+     <!-- Sumatra -->
+     <path class="wib-map" d="M45 110 L80 80 L105 91 L118 120 L105 150 L88 180 L76 220 L55 238 L42 214 L52 184 L40 157 Z"/>
+     <!-- Jawa -->
+     <path class="wib-map" d="M125 246 L190 240 L246 250 L255 263 L220 270 L165 264 L126 259 Z"/>
+     <!-- Kalimantan Barat dan Tengah -->
+     <path class="wib-map" d="M215 115 L260 90 L300 105 L311 139 L292 176 L260 195 L227 175 L204 143 Z"/>
+     <!-- Kalimantan bagian timur dan selatan -->
+     <path class="wita-map" d="M300 105 L330 118 L342 153 L326 183 L294 178 L311 139 Z"/>
+     <!-- Bali dan Nusa Tenggara -->
+     <path class="wita-map" d="M260 264 L281 265 L290 270 L277 275 L259 271 Z"/>
+     <path class="wita-map" d="M295 270 L330 273 L342 278 L323 282 L295 277 Z"/>
+     <path class="wita-map" d="M348 278 L390 281 L405 286 L380 290 L350 285 Z"/>
+     <!-- Sulawesi -->
+     <path class="wita-map" d="M350 100 L372 88 L387 106 L378 129 L401 141 L390 155 L365 143 L350 164 L338 147 L350 126 L332 111 Z"/>
+     <!-- Maluku -->
+     <path class="wit-map" d="M435 148 L447 138 L458 151 L450 163 L437 160 Z"/>
+     <path class="wit-map" d="M470 177 L486 167 L493 180 L481 190 L469 187 Z"/>
+     <!-- Papua -->
+     <path class="wit-map" d="M500 118 L548 103 L591 116 L614 141 L600 164 L558 169 L520 157 L493 140 Z"/>
+     <!-- labels -->
+     <text x="48" y="130" font-size="14">SUMATRA</text>
+     <text x="140" y="291" font-size="13">JAWA</text>
+     <text x="221" y="135" font-size="13">KALBAR</text>
+     <text x="300" y="205" font-size="12">KALSEL & KALTIM</text>
+     <text x="300" y="306" font-size="12">NUSA TENGGARA</text>
+     <text x="345" y="75" font-size="13">SULAWESI</text>
+     <text x="426" y="216" font-size="13">MALUKU</text>
+     <text x="522" y="191" font-size="16">PAPUA</text>
+     <text x="80" y="35" font-size="18">INDONESIA</text>
+    </svg>
+
+    <div class="legend">
+     <span><i class="dot" style="background:#2388d0"></i>WIB · UTC+7</span>
+     <span><i class="dot" style="background:#28a982"></i>WITA · UTC+8</span>
+     <span><i class="dot" style="background:#eea83b"></i>WIT · UTC+9</span>
+    </div>
+    <p class="map-caption">Peta ini merupakan ilustrasi edukatif dengan bentuk pulau yang disederhanakan, bukan peta batas administrasi berskala. Untuk mengetahui zona waktu setiap provinsi, pilih nama provinsi di samping.</p>
+   </div>
+
+   <div class="info-panel reveal">
+    <h3>📍 Pilih Provinsi</h3>
+    <p style="margin:0;color:#668098;font-size:.9rem">Klik salah satu provinsi untuk mengetahui zona waktu dan ibu kotanya.</p>
+    <div class="province-select" id="provinceButtons"></div>
+    <div class="result-box" id="provinceResult" aria-live="polite">
+     <h4>Halo, penjelajah!</h4>
+     <p>Pilih provinsi untuk melihat informasi zona waktunya.</p>
+    </div>
+   </div>
+  </div>
+
+  <div class="example reveal">
+   <div class="emoji">💡</div>
+   <div><strong>Contoh dalam kehidupan sehari-hari</strong>
+    <p>Jika di Jakarta (WIB) pukul 07.00, maka di Makassar (WITA) pukul 08.00 dan di Jayapura (WIT) pukul 09.00. Semakin ke timur, waktunya semakin cepat.</p>
+   </div>
+  </div>
+ </div>
 </section>
 
 <section class="game-section" id="game">
-  <div class="wrap">
-    <div class="section-head reveal"><span class="kicker">Saatnya bermain</span><h2>🎮 Game Educaplay</h2><p>Uji kemampuanmu mencocokkan kota dengan zona waktunya. Baca petunjuk, lalu mainkan permainan yang sudah disiapkan.</p></div>
-    <div class="panel reveal">
-      <div class="embed-shell" id="gameContainer">
-
-  <h3>🧩 Permainan 1</h3>
-  <!-- Tempel kode embed Educaplay pertama di sini -->
-  <iframe src="<iframe allow="fullscreen; autoplay; allow-top-navigation-by-user-activation" allowfullscreen width="795" height="690" frameborder="0" src="https://www.educaplay.com/game/31618204-pembagian_waktu.html"></iframe>"
-          width="100%" height="500"
-          frameborder="0" allowfullscreen></iframe>
-
-  <hr>
-
-  <h3>🎯 Permainan 2</h3>
-  <!-- Tempel kode embed Educaplay kedua di sini -->
-  <iframe src="<iframe allow="fullscreen; autoplay; allow-top-navigation-by-user-activation" allowfullscreen width="795" height="690" frameborder="0" src="https://www.educaplay.com/game/31620595-pembagian_zona_waktu_di_indonesia.html"></iframe>"
-          width="100%" height="500"
-          frameborder="0" allowfullscreen></iframe>
-
-  <hr>
-
-  <h3>🏆 Permainan 3</h3>
-  <!-- Tempel kode embed Educaplay ketiga di sini -->
-  <iframe src="<iframe allow="fullscreen; autoplay; allow-top-navigation-by-user-activation" allowfullscreen width="795" height="690" frameborder="0" src="https://www.educaplay.com/game/31640588-mengenal_zona_waktu_indonesia.html"></iframe>"
-          width="100%" height="500"
-          frameborder="0" allowfullscreen></iframe>
-
-</div>
+ <div class="wrap">
+  <div class="section-head reveal">
+   <span class="kicker">Saatnya bermain</span>
+   <h2>🎮 Game Educaplay</h2>
+   <p>Ayo uji kemampuanmu melalui tiga permainan interaktif berikut!</p>
   </div>
+
+  <div class="game-list">
+   <article class="game-card reveal">
+    <h3><span class="game-number">1</span>🧩 Game 1 — Pembagian Waktu</h3>
+    <iframe src="https://www.educaplay.com/game/31618204-pembagian_waktu.html"
+     title="Educaplay Game 1 Pembagian Waktu"
+     allow="fullscreen; autoplay; allow-top-navigation-by-user-activation"
+     allowfullscreen loading="lazy"></iframe>
+    <p class="small-note">Ayo selesaikan permainan pertama!</p>
+   </article>
+
+   <article class="game-card reveal">
+    <h3><span class="game-number">2</span>🌏 Game 2 — Pembagian Zona Waktu di Indonesia</h3>
+    <iframe src="https://www.educaplay.com/game/31620595-pembagian_zona_waktu_di_indonesia.html"
+     title="Educaplay Game 2 Pembagian Zona Waktu di Indonesia"
+     allow="fullscreen; autoplay; allow-top-navigation-by-user-activation"
+     allowfullscreen loading="lazy"></iframe>
+    <p class="small-note">Lanjutkan petualanganmu di permainan kedua!</p>
+   </article>
+
+   <article class="game-card reveal">
+    <h3><span class="game-number">3</span>⏰ Game 3 — Mengenal Zona Waktu Indonesia</h3>
+    <iframe src="https://www.educaplay.com/game/31640588-mengenal_zona_waktu_indonesia.html"
+     title="Educaplay Game 3 Mengenal Zona Waktu Indonesia"
+     allow="fullscreen; autoplay; allow-top-navigation-by-user-activation"
+     allowfullscreen loading="lazy"></iframe>
+    <p class="small-note">Selesaikan permainan terakhir dengan semangat!</p>
+   </article>
+  </div>
+ </div>
 </section>
 
 <section id="kuis">
-  <div class="wrap">
-    <div class="section-head reveal"><span class="kicker">Tantangan terakhir</span><h2>🏆 Evaluasi dan Kuis</h2><p>Sudah siap? Jawab 10 pertanyaan berikut untuk mengetahui seberapa jauh kamu memahami zona waktu Indonesia.</p></div>
-    <div class="quiz-wrap reveal">
-      <div class="quiz-card" id="quizCard">
-        <div id="quizPlay">
-          <div class="quiz-top"><span id="questionCount">Soal 1 dari 10</span><span id="scoreLive">⭐ Skor: 0</span></div>
-          <div class="progress"><div class="progress-bar" id="progressBar"></div></div>
-          <div class="question" id="questionText"></div>
-          <div class="answers" id="answers"></div>
-          <div class="feedback" id="feedback" aria-live="polite"></div>
-          <div class="quiz-controls"><span style="font-size:.82rem;color:#7891a3">Pilih satu jawaban terbaik.</span><button class="btn" id="nextQuestion" disabled>Berikutnya ➜</button></div>
-        </div>
-        <div class="quiz-result hidden" id="quizResult">
-          <div style="font-size:3rem" id="resultEmoji">🎉</div><h2>Petualangan Selesai!</h2><div class="score-circle" id="finalScore">0</div>
-          <h3 id="resultMessage">Hebat!</h3><p id="resultDetail" style="color:#668098"></p>
-          <button class="btn" id="restartQuiz">🔄 Ulangi Kuis</button>
-        </div>
-      </div>
-    </div>
+ <div class="wrap">
+  <div class="section-head reveal">
+   <span class="kicker">Tantangan terakhir</span>
+   <h2>🏆 Evaluasi dan Kuis</h2>
+   <p>Jawab 10 pertanyaan berikut untuk mengetahui seberapa jauh kamu memahami zona waktu Indonesia.</p>
   </div>
+
+  <div class="quiz-wrap reveal">
+   <div class="quiz-card" id="quizCard">
+    <div id="quizPlay">
+     <div class="quiz-top">
+      <span id="questionCount">Soal 1 dari 10</span>
+      <span id="scoreLive">⭐ Skor: 0</span>
+     </div>
+     <div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+     <div class="question" id="questionText"></div>
+     <div class="answers" id="answers"></div>
+     <div class="feedback" id="feedback" aria-live="polite"></div>
+     <div class="quiz-controls">
+      <span style="font-size:.82rem;color:#7891a3">Pilih satu jawaban terbaik.</span>
+      <button class="btn" id="nextQuestion" disabled>Berikutnya ➜</button>
+     </div>
+    </div>
+
+    <div class="quiz-result hidden" id="quizResult">
+     <div style="font-size:3rem" id="resultEmoji">🎉</div>
+     <h2>Petualangan Selesai!</h2>
+     <div class="score-circle" id="finalScore">0</div>
+     <h3 id="resultMessage">Hebat!</h3>
+     <p id="resultDetail" style="color:#668098"></p>
+     <button class="btn" id="restartQuiz">🔄 Ulangi Kuis</button>
+    </div>
+   </div>
+  </div>
+ </div>
 </section>
 </main>
-<footer><div class="wrap"><strong>🧭 Jelajah Zona Waktu Indonesia</strong><p>Belajar mengenal WIB, WITA, dan WIT dengan cara yang menyenangkan.</p><p>Media pembelajaran interaktif · Untuk siswa Sekolah Dasar</p></div></footer>
+
+<footer>
+ <div class="wrap">
+  <strong>🧭 Jelajah Zona Waktu Indonesia</strong>
+  <p>Belajar mengenal WIB, WITA, dan WIT dengan cara yang menyenangkan.</p>
+  <p>Media pembelajaran interaktif · Untuk siswa Sekolah Dasar</p>
+ </div>
+</footer>
 
 <script>
-/* =========================================================
-   PENGATURAN VIDEO DAN EDUCAPLAY
-   1. VIDEO_URL: isi dengan tautan YouTube, contoh:
-      https://www.youtube.com/watch?v=ID_VIDEO
-      atau tautan embed: https://www.youtube.com/embed/ID_VIDEO
-   2. EDUCPLAY_EMBED_URL: isi dengan URL embed dari Educaplay.
-   3. EDUCPLAY_PAGE_URL: isi dengan URL halaman permainan Educaplay.
-   ========================================================= */
-const VIDEO_URL = ""; // GANTI dengan tautan video YouTube kelompok
-const EDUCPLAY_EMBED_URL = ""; // GANTI dengan URL embed Educaplay
-const EDUCPLAY_PAGE_URL = ""; // GANTI dengan URL halaman permainan Educaplay
+// ======================================
+// MUSIK LATAR BERANDA DAN BAGIAN MATERI
+// Musik dibuat menggunakan Web Audio API.
+// ======================================
+let audioContext=null;
+let musicEnabled=false;
+let musicTimer=null;
+let musicStep=0;
+let activeTrack="home";
 
-function youtubeEmbed(url){
-  if(!url) return "";
-  try{
-    const u=new URL(url);
-    if(u.hostname.includes("youtu.be")) return "https://www.youtube.com/embed/"+u.pathname.slice(1);
-    if(u.hostname.includes("youtube.com")){
-      if(u.pathname.startsWith("/embed/")) return url;
-      const id=u.searchParams.get("v");
-      return id ? "https://www.youtube.com/embed/"+id : "";
-    }
-  }catch(e){}
-  return "";
-}
-const videoEmbed=youtubeEmbed(VIDEO_URL);
-if(videoEmbed){
-  document.getElementById("videoContainer").innerHTML='<iframe src="'+videoEmbed+'" title="Video pembelajaran zona waktu Indonesia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>';
-}
-if(EDUCPLAY_EMBED_URL){
-  document.getElementById("gameContainer").innerHTML='<iframe src="'+EDUCPLAY_EMBED_URL+'" title="Permainan Educaplay zona waktu Indonesia" allowfullscreen loading="lazy"></iframe>';
-}
-if(EDUCPLAY_PAGE_URL){
-  const gameLink=document.getElementById("openGame");
-  gameLink.href=EDUCPLAY_PAGE_URL;gameLink.classList.remove("hidden");
+const homeNotes=[523.25,659.25,783.99,659.25,587.33,698.46,783.99,698.46];
+const lessonNotes=[392,493.88,587.33,493.88,440,523.25,587.33,523.25];
+
+function ensureAudio(){
+ if(!audioContext){
+  const AudioCtx=window.AudioContext||window.webkitAudioContext;
+  if(!AudioCtx)return false;
+  audioContext=new AudioCtx();
+ }
+ if(audioContext.state==="suspended")audioContext.resume();
+ return true;
 }
 
-/* Menu mobile */
-const hamb=document.getElementById("hamb"), navLinks=document.getElementById("navLinks");
-hamb.addEventListener("click",()=>{const open=navLinks.classList.toggle("open");hamb.setAttribute("aria-expanded",String(open));hamb.textContent=open?"✕":"☰"});
-navLinks.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{navLinks.classList.remove("open");hamb.setAttribute("aria-expanded","false");hamb.textContent="☰"}));
+function playTone(freq,duration=.24,volume=.045,type="sine"){
+ if(!audioContext)return;
+ const osc=audioContext.createOscillator();
+ const gain=audioContext.createGain();
+ osc.type=type;
+ osc.frequency.value=freq;
+ gain.gain.setValueAtTime(.0001,audioContext.currentTime);
+ gain.gain.exponentialRampToValueAtTime(volume,audioContext.currentTime+.035);
+ gain.gain.exponentialRampToValueAtTime(.0001,audioContext.currentTime+duration);
+ osc.connect(gain);
+ gain.connect(audioContext.destination);
+ osc.start();
+ osc.stop(audioContext.currentTime+duration+.03);
+}
 
-/* Jam real-time untuk tiga zona waktu Indonesia */
+function musicBeat(){
+ if(!musicEnabled||!audioContext)return;
+ const notes=activeTrack==="lesson"?lessonNotes:homeNotes;
+ const note=notes[musicStep%notes.length];
+ playTone(note,.34,.025,"sine");
+ if(musicStep%4===0)playTone(note/2,.45,.012,"triangle");
+ musicStep++;
+}
+
+function startMusic(){
+ if(!ensureAudio())return;
+ musicEnabled=true;
+ clearInterval(musicTimer);
+ musicStep=0;
+ musicBeat();
+ musicTimer=setInterval(musicBeat,420);
+ updateMusicButton();
+}
+
+function stopMusic(){
+ musicEnabled=false;
+ clearInterval(musicTimer);
+ musicTimer=null;
+ updateMusicButton();
+}
+
+function updateMusicButton(){
+ const btn=document.getElementById("musicToggle");
+ btn.innerHTML=musicEnabled
+  ?"🎵 Musik ON<small>Tekan untuk mematikan</small>"
+  :"🎵 Musik OFF<small>Tekan untuk menyalakan</small>";
+}
+
+document.getElementById("musicToggle").addEventListener("click",()=>{
+ if(musicEnabled)stopMusic();
+ else startMusic();
+});
+
+function changeMusicTrack(track){
+ if(activeTrack===track)return;
+ activeTrack=track;
+ musicStep=0;
+ if(musicEnabled){
+  clearInterval(musicTimer);
+  musicBeat();
+  musicTimer=setInterval(musicBeat,420);
+ }
+}
+
+// Musik berubah mengikuti bagian yang sedang dibuka.
+const musicObserver=new IntersectionObserver(entries=>{
+ entries.forEach(entry=>{
+  if(entry.isIntersecting){
+   if(entry.target.id==="beranda")changeMusicTrack("home");
+   if(entry.target.id==="materi")changeMusicTrack("lesson");
+   if(entry.target.id==="video"||entry.target.id==="game"||entry.target.id==="kuis"){
+    stopMusic();
+   }
+  }
+ });
+},{threshold:.35});
+
+document.querySelectorAll("#beranda,#video,#materi,#game,#kuis").forEach(section=>{
+ musicObserver.observe(section);
+});
+
+// Efek suara kuis
+function playQuizSound(correct){
+ if(!ensureAudio())return;
+ if(correct){
+  playTone(659.25,.16,.08,"sine");
+  setTimeout(()=>playTone(783.99,.2,.08,"sine"),130);
+  setTimeout(()=>playTone(1046.5,.3,.07,"sine"),270);
+ }else{
+  playTone(330,.22,.07,"triangle");
+  setTimeout(()=>playTone(246.94,.35,.065,"triangle"),180);
+ }
+}
+
+// ======================================
+// MENU MOBILE
+// ======================================
+const hamb=document.getElementById("hamb");
+const navLinks=document.getElementById("navLinks");
+
+hamb.addEventListener("click",()=>{
+ const open=navLinks.classList.toggle("open");
+ hamb.setAttribute("aria-expanded",String(open));
+ hamb.textContent=open?"✕":"☰";
+});
+
+navLinks.querySelectorAll("a").forEach(a=>{
+ a.addEventListener("click",()=>{
+  navLinks.classList.remove("open");
+  hamb.setAttribute("aria-expanded","false");
+  hamb.textContent="☰";
+ });
+});
+
+// ======================================
+// JAM DIGITAL TIGA ZONA WAKTU
+// ======================================
 function updateClocks(){
-  const zones=[["clockWIB","Asia/Jakarta"],["clockWITA","Asia/Makassar"],["clockWIT","Asia/Jayapura"]];
-  zones.forEach(([id,tz])=>{
-    document.getElementById(id).textContent=new Intl.DateTimeFormat("id-ID",{timeZone:tz,hour:"2-digit",minute:"2-digit",second:"2-digit",hour12:false}).format(new Date());
-  });
+ const zones=[
+  ["clockWIB","Asia/Jakarta"],
+  ["clockWITA","Asia/Makassar"],
+  ["clockWIT","Asia/Jayapura"]
+ ];
+ zones.forEach(([id,tz])=>{
+  document.getElementById(id).textContent=
+   new Intl.DateTimeFormat("id-ID",{
+    timeZone:tz,hour:"2-digit",minute:"2-digit",
+    second:"2-digit",hour12:false
+   }).format(new Date());
+ });
 }
-updateClocks();setInterval(updateClocks,1000);
+updateClocks();
+setInterval(updateClocks,1000);
 
-/* Data provinsi dan zona waktu. */
+// ======================================
+// DATA 38 PROVINSI INDONESIA
+// ======================================
 const provinces=[
-["Aceh","WIB","UTC+7","Banda Aceh"],["Sumatera Utara","WIB","UTC+7","Medan"],["Sumatera Barat","WIB","UTC+7","Padang"],["Riau","WIB","UTC+7","Pekanbaru"],["Kepulauan Riau","WIB","UTC+7","Tanjungpinang"],["Jambi","WIB","UTC+7","Jambi"],["Sumatera Selatan","WIB","UTC+7","Palembang"],["Bengkulu","WIB","UTC+7","Bengkulu"],["Lampung","WIB","UTC+7","Bandar Lampung"],["Kepulauan Bangka Belitung","WIB","UTC+7","Pangkalpinang"],["Banten","WIB","UTC+7","Serang"],["DKI Jakarta","WIB","UTC+7","Jakarta"],["Jawa Barat","WIB","UTC+7","Bandung"],["Jawa Tengah","WIB","UTC+7","Semarang"],["DI Yogyakarta","WIB","UTC+7","Yogyakarta"],["Jawa Timur","WIB","UTC+7","Surabaya"],["Kalimantan Barat","WIB","UTC+7","Pontianak"],["Kalimantan Tengah","WIB","UTC+7","Palangka Raya"],
-["Bali","WITA","UTC+8","Denpasar"],["Nusa Tenggara Barat","WITA","UTC+8","Mataram"],["Nusa Tenggara Timur","WITA","UTC+8","Kupang"],["Kalimantan Selatan","WITA","UTC+8","Banjarmasin"],["Kalimantan Timur","WITA","UTC+8","Samarinda"],["Kalimantan Utara","WITA","UTC+8","Tanjung Selor"],["Sulawesi Utara","WITA","UTC+8","Manado"],["Gorontalo","WITA","UTC+8","Gorontalo"],["Sulawesi Tengah","WITA","UTC+8","Palu"],["Sulawesi Barat","WITA","UTC+8","Mamuju"],["Sulawesi Selatan","WITA","UTC+8","Makassar"],["Sulawesi Tenggara","WITA","UTC+8","Kendari"],
-["Maluku","WIT","UTC+9","Ambon"],["Maluku Utara","WIT","UTC+9","Sofifi"],["Papua","WIT","UTC+9","Jayapura"],["Papua Barat","WIT","UTC+9","Manokwari"],["Papua Barat Daya","WIT","UTC+9","Sorong"],["Papua Tengah","WIT","UTC+9","Nabire"],["Papua Pegunungan","WIT","UTC+9","Wamena"],["Papua Selatan","WIT","UTC+9","Merauke"]
+ ["Aceh","WIB","UTC+7","Banda Aceh"],
+ ["Sumatera Utara","WIB","UTC+7","Medan"],
+ ["Sumatera Barat","WIB","UTC+7","Padang"],
+ ["Riau","WIB","UTC+7","Pekanbaru"],
+ ["Kepulauan Riau","WIB","UTC+7","Tanjungpinang"],
+ ["Jambi","WIB","UTC+7","Jambi"],
+ ["Sumatera Selatan","WIB","UTC+7","Palembang"],
+ ["Bengkulu","WIB","UTC+7","Bengkulu"],
+ ["Lampung","WIB","UTC+7","Bandar Lampung"],
+ ["Kepulauan Bangka Belitung","WIB","UTC+7","Pangkalpinang"],
+ ["Banten","WIB","UTC+7","Serang"],
+ ["DKI Jakarta","WIB","UTC+7","Jakarta"],
+ ["Jawa Barat","WIB","UTC+7","Bandung"],
+ ["Jawa Tengah","WIB","UTC+7","Semarang"],
+ ["DI Yogyakarta","WIB","UTC+7","Yogyakarta"],
+ ["Jawa Timur","WIB","UTC+7","Surabaya"],
+ ["Kalimantan Barat","WIB","UTC+7","Pontianak"],
+ ["Kalimantan Tengah","WIB","UTC+7","Palangka Raya"],
+
+ ["Bali","WITA","UTC+8","Denpasar"],
+ ["Nusa Tenggara Barat","WITA","UTC+8","Mataram"],
+ ["Nusa Tenggara Timur","WITA","UTC+8","Kupang"],
+ ["Kalimantan Selatan","WITA","UTC+8","Banjarmasin"],
+ ["Kalimantan Timur","WITA","UTC+8","Samarinda"],
+ ["Kalimantan Utara","WITA","UTC+8","Tanjung Selor"],
+ ["Sulawesi Utara","WITA","UTC+8","Manado"],
+ ["Gorontalo","WITA","UTC+8","Gorontalo"],
+ ["Sulawesi Tengah","WITA","UTC+8","Palu"],
+ ["Sulawesi Barat","WITA","UTC+8","Mamuju"],
+ ["Sulawesi Selatan","WITA","UTC+8","Makassar"],
+ ["Sulawesi Tenggara","WITA","UTC+8","Kendari"],
+
+ ["Maluku","WIT","UTC+9","Ambon"],
+ ["Maluku Utara","WIT","UTC+9","Sofifi"],
+ ["Papua","WIT","UTC+9","Jayapura"],
+ ["Papua Barat","WIT","UTC+9","Manokwari"],
+ ["Papua Barat Daya","WIT","UTC+9","Sorong"],
+ ["Papua Tengah","WIT","UTC+9","Nabire"],
+ ["Papua Pegunungan","WIT","UTC+9","Wamena"],
+ ["Papua Selatan","WIT","UTC+9","Merauke"]
 ];
-const zoneColors={WIB:"#2388d0",WITA:"#28a982",WIT:"#eea83b"};
+
+const zoneColors={
+ WIB:"#2388d0",
+ WITA:"#28a982",
+ WIT:"#eea83b"
+};
+
 const provinceButtons=document.getElementById("provinceButtons");
-provinces.forEach((p,i)=>{
-  const b=document.createElement("button");b.className="province-btn";b.textContent=p[0];b.type="button";
-  b.addEventListener("click",()=>{
-    document.querySelectorAll(".province-btn").forEach(x=>x.classList.remove("selected"));b.classList.add("selected");
-    const result=document.getElementById("provinceResult");
-    result.style.borderLeftColor=zoneColors[p[1]];
-    result.innerHTML="<h4>"+p[0]+"</h4><p>Contoh kota: <strong>"+p[3]+"</strong></p><p>Zona waktu: <strong>"+p[1]+" ("+p[2]+")</strong></p><p>"+(p[1]==="WIB"?"Waktu paling barat dari tiga zona Indonesia.":p[1]==="WITA"?"Satu jam lebih cepat daripada WIB.":"Dua jam lebih cepat daripada WIB.")+"</p>";
-  });
-  provinceButtons.appendChild(b);
+
+provinces.forEach(p=>{
+ const b=document.createElement("button");
+ b.className="province-btn";
+ b.textContent=p[0];
+ b.type="button";
+
+ b.addEventListener("click",()=>{
+  document.querySelectorAll(".province-btn")
+   .forEach(x=>x.classList.remove("selected"));
+  b.classList.add("selected");
+
+  const result=document.getElementById("provinceResult");
+  result.style.borderLeftColor=zoneColors[p[1]];
+
+  const explanation=
+   p[1]==="WIB"?"Wilayah ini menggunakan Waktu Indonesia Barat.":
+   p[1]==="WITA"?"Wilayah ini satu jam lebih cepat daripada WIB.":
+   "Wilayah ini dua jam lebih cepat daripada WIB.";
+
+  result.innerHTML="";
+  const title=document.createElement("h4");
+  title.textContent=p[0];
+  const city=document.createElement("p");
+  city.textContent="Contoh ibu kota: "+p[3];
+  const zone=document.createElement("p");
+  zone.textContent="Zona waktu: "+p[1]+" ("+p[2]+")";
+  const desc=document.createElement("p");
+  desc.textContent=explanation;
+  result.append(title,city,zone,desc);
+ });
+ provinceButtons.appendChild(b);
 });
 
-/* Kuis: satu jawaban per soal, skor hanya dihitung sekali. */
+// ======================================
+// KUIS INTERAKTIF
+// ======================================
 const questions=[
-{q:"Apa yang dimaksud dengan zona waktu?",a:["Pembagian wilayah yang memiliki waktu standar yang sama","Pembagian wilayah berdasarkan jenis cuaca","Nama lain dari musim","Waktu khusus untuk berlibur"],c:0,why:"Zona waktu adalah wilayah yang menggunakan waktu standar tertentu."},
-{q:"Ada berapa zona waktu di Indonesia?",a:["Satu","Dua","Tiga","Empat"],c:2,why:"Indonesia memiliki WIB, WITA, dan WIT."},
-{q:"WIB merupakan singkatan dari ....",a:["Waktu Indonesia Bersama","Waktu Indonesia Barat","Wilayah Indonesia Barat","Waktu Internasional Barat"],c:1,why:"WIB adalah Waktu Indonesia Barat."},
-{q:"Wilayah berikut yang termasuk WIB adalah ....",a:["Bali","Papua","Kalimantan Barat","Sulawesi Selatan"],c:2,why:"Kalimantan Barat termasuk WIB."},
-{q:"Kota Makassar menggunakan zona waktu ....",a:["WIB","WITA","WIT","UTC+7"],c:1,why:"Makassar berada di Sulawesi Selatan, yang termasuk WITA."},
-{q:"Jika di Jakarta pukul 08.00 WIB, pukul berapakah di Bali?",a:["07.00","08.00","09.00","10.00"],c:2,why:"Bali menggunakan WITA, satu jam lebih cepat daripada WIB."},
-{q:"Provinsi Kalimantan Tengah termasuk zona waktu ....",a:["WIB","WITA","WIT","Tidak memiliki zona waktu"],c:0,why:"Kalimantan Tengah termasuk WIB, bersama Kalimantan Barat."},
-{q:"Jika di Makassar pukul 13.00 WITA, waktu di Jayapura adalah ....",a:["11.00 WIT","12.00 WIT","13.00 WIT","14.00 WIT"],c:3,why:"WIT satu jam lebih cepat daripada WITA."},
-{q:"Wilayah yang menggunakan WIT adalah ....",a:["Jawa Timur dan Bali","Maluku dan Papua","Sumatra dan Jawa","Kalimantan Barat dan Tengah"],c:1,why:"Maluku dan wilayah Papua menggunakan WIT."},
-{q:"Mengapa Indonesia memiliki tiga zona waktu?",a:["Karena memiliki banyak gunung","Karena wilayahnya membentang luas dari barat ke timur","Karena setiap provinsi menentukan jam sendiri","Karena jumlah penduduknya banyak"],c:1,why:"Bentang wilayah Indonesia dari barat ke timur menyebabkan perbedaan waktu."}
+ {
+  q:"Apa yang dimaksud dengan zona waktu?",
+  a:["Pembagian wilayah yang memiliki waktu standar yang sama","Pembagian wilayah berdasarkan jenis cuaca","Nama lain dari musim","Waktu khusus untuk berlibur"],
+  c:0,why:"Zona waktu adalah wilayah yang menggunakan waktu standar tertentu."
+ },
+ {
+  q:"Ada berapa zona waktu di Indonesia?",
+  a:["Satu","Dua","Tiga","Empat"],
+  c:2,why:"Indonesia memiliki WIB, WITA, dan WIT."
+ },
+ {
+  q:"WIB merupakan singkatan dari ....",
+  a:["Waktu Indonesia Bersama","Waktu Indonesia Barat","Wilayah Indonesia Barat","Waktu Internasional Barat"],
+  c:1,why:"WIB adalah Waktu Indonesia Barat."
+ },
+ {
+  q:"Wilayah berikut yang termasuk WIB adalah ....",
+  a:["Bali","Papua","Kalimantan Barat","Sulawesi Selatan"],
+  c:2,why:"Kalimantan Barat termasuk WIB."
+ },
+ {
+  q:"Kota Makassar menggunakan zona waktu ....",
+  a:["WIB","WITA","WIT","UTC+7"],
+  c:1,why:"Makassar berada di Sulawesi Selatan yang termasuk WITA."
+ },
+ {
+  q:"Jika di Jakarta pukul 08.00 WIB, pukul berapakah di Bali?",
+  a:["07.00","08.00","09.00","10.00"],
+  c:2,why:"Bali menggunakan WITA, satu jam lebih cepat daripada WIB."
+ },
+ {
+  q:"Provinsi Kalimantan Tengah termasuk zona waktu ....",
+  a:["WIB","WITA","WIT","Tidak memiliki zona waktu"],
+  c:0,why:"Kalimantan Tengah termasuk WIB."
+ },
+ {
+  q:"Jika di Makassar pukul 13.00 WITA, waktu di Jayapura adalah ....",
+  a:["11.00 WIT","12.00 WIT","13.00 WIT","14.00 WIT"],
+  c:3,why:"WIT satu jam lebih cepat daripada WITA."
+ },
+ {
+  q:"Wilayah yang menggunakan WIT adalah ....",
+  a:["Jawa Timur dan Bali","Maluku dan Papua","Sumatra dan Jawa","Kalimantan Barat dan Tengah"],
+  c:1,why:"Maluku dan seluruh wilayah Papua menggunakan WIT."
+ },
+ {
+  q:"Mengapa Indonesia memiliki tiga zona waktu?",
+  a:["Karena memiliki banyak gunung","Karena wilayahnya membentang luas dari barat ke timur","Karena setiap provinsi menentukan jam sendiri","Karena jumlah penduduknya banyak"],
+  c:1,why:"Bentang wilayah Indonesia dari barat ke timur menyebabkan perbedaan waktu."
+ }
 ];
+
 let current=0,score=0,answered=false,correctCount=0;
-const questionText=document.getElementById("questionText"),answersEl=document.getElementById("answers"),feedback=document.getElementById("feedback"),nextBtn=document.getElementById("nextQuestion");
+
+const questionText=document.getElementById("questionText");
+const answersEl=document.getElementById("answers");
+const feedback=document.getElementById("feedback");
+const nextBtn=document.getElementById("nextQuestion");
+
 function renderQuestion(){
-  answered=false;const item=questions[current];
-  document.getElementById("questionCount").textContent=`Soal ${current+1} dari ${questions.length}`;
-  document.getElementById("scoreLive").textContent=`⭐ Skor: ${score}`;
-  document.getElementById("progressBar").style.width=`${(current/questions.length)*100}%`;
-  questionText.textContent=item.q;answersEl.innerHTML="";feedback.textContent="";nextBtn.disabled=true;
-  item.a.forEach((answer,i)=>{
-    const b=document.createElement("button");b.className="answer";b.type="button";b.innerHTML=`<strong>${String.fromCharCode(65+i)}.</strong> ${answer}`;
-    b.addEventListener("click",()=>chooseAnswer(i));answersEl.appendChild(b);
-  });
-  nextBtn.textContent=current===questions.length-1?"Lihat Hasil 🏆":"Berikutnya ➜";
+ answered=false;
+ const item=questions[current];
+
+ document.getElementById("questionCount").textContent=
+  `Soal ${current+1} dari ${questions.length}`;
+ document.getElementById("scoreLive").textContent=`⭐ Skor: ${score}`;
+ document.getElementById("progressBar").style.width=
+  `${(current/questions.length)*100}%`;
+
+ questionText.textContent=item.q;
+ answersEl.innerHTML="";
+ feedback.textContent="";
+ nextBtn.disabled=true;
+
+ item.a.forEach((answer,i)=>{
+  const b=document.createElement("button");
+  b.className="answer";
+  b.type="button";
+  const letter=document.createElement("strong");
+  letter.textContent=String.fromCharCode(65+i)+". ";
+  b.append(letter,document.createTextNode(answer));
+  b.addEventListener("click",()=>chooseAnswer(i));
+  answersEl.appendChild(b);
+ });
+
+ nextBtn.textContent=
+  current===questions.length-1?"Lihat Hasil 🏆":"Berikutnya ➜";
 }
+
 function chooseAnswer(choice){
-  if(answered)return;answered=true;const item=questions[current];const buttons=[...answersEl.children];
-  buttons.forEach((b,i)=>{b.disabled=true;if(i===item.c)b.classList.add("correct");if(i===choice&&choice!==item.c)b.classList.add("wrong")});
-  if(choice===item.c){score+=10;correctCount++;feedback.textContent="🎉 Benar! "+item.why;feedback.style.color="#16865c"}
-  else{feedback.textContent="💪 Belum tepat. "+item.why;feedback.style.color="#c15b4f"}
-  document.getElementById("scoreLive").textContent=`⭐ Skor: ${score}`;nextBtn.disabled=false;
+ if(answered)return;
+ answered=true;
+
+ const item=questions[current];
+ const buttons=[...answersEl.children];
+
+ buttons.forEach((b,i)=>{
+  b.disabled=true;
+  if(i===item.c)b.classList.add("correct");
+  if(i===choice&&choice!==item.c)b.classList.add("wrong");
+ });
+
+ if(choice===item.c){
+  score+=10;
+  correctCount++;
+  feedback.textContent="🎉 Benar! "+item.why;
+  feedback.style.color="#16865c";
+  playQuizSound(true);
+ }else{
+  feedback.textContent="💪 Belum tepat. "+item.why;
+  feedback.style.color="#c15b4f";
+  playQuizSound(false);
+ }
+
+ document.getElementById("scoreLive").textContent=`⭐ Skor: ${score}`;
+ nextBtn.disabled=false;
 }
+
 nextBtn.addEventListener("click",()=>{
-  if(!answered)return;
-  if(current<questions.length-1){current++;renderQuestion()}
-  else showResult();
+ if(!answered)return;
+ if(current<questions.length-1){
+  current++;
+  renderQuestion();
+ }else{
+  showResult();
+ }
 });
+
 function showResult(){
-  document.getElementById("quizPlay").classList.add("hidden");document.getElementById("quizResult").classList.remove("hidden");
-  document.getElementById("progressBar").style.width="100%";
-  document.getElementById("finalScore").textContent=score;
-  document.getElementById("resultDetail").textContent=`Kamu menjawab ${correctCount} soal dengan benar dan ${questions.length-correctCount} soal dengan salah.`;
-  let message,emoji;
-  if(score===100){message="Luar biasa! Kamu ahli zona waktu!";emoji="🏆"}
-  else if(score>=70){message="Hebat! Pengetahuanmu sudah bagus!";emoji="🌟"}
-  else if(score>=50){message="Bagus! Terus berlatih, ya!";emoji="👏"}
-  else{message="Jangan menyerah! Ayo pelajari materinya lagi!";emoji="💪"}
-  document.getElementById("resultMessage").textContent=message;document.getElementById("resultEmoji").textContent=emoji;
+ document.getElementById("quizPlay").classList.add("hidden");
+ document.getElementById("quizResult").classList.remove("hidden");
+ document.getElementById("progressBar").style.width="100%";
+ document.getElementById("finalScore").textContent=score;
+ document.getElementById("resultDetail").textContent=
+  `Kamu menjawab ${correctCount} soal dengan benar dan ${questions.length-correctCount} soal dengan salah.`;
+
+ let message,emoji;
+ if(score===100){
+  message="Luar biasa! Kamu ahli zona waktu!";
+  emoji="🏆";
+ }else if(score>=70){
+  message="Hebat! Pengetahuanmu sudah bagus!";
+  emoji="🌟";
+ }else if(score>=50){
+  message="Bagus! Terus berlatih, ya!";
+  emoji="👏";
+ }else{
+  message="Jangan menyerah! Ayo pelajari materinya lagi!";
+  emoji="💪";
+ }
+
+ document.getElementById("resultMessage").textContent=message;
+ document.getElementById("resultEmoji").textContent=emoji;
 }
+
 document.getElementById("restartQuiz").addEventListener("click",()=>{
-  current=0;score=0;correctCount=0;document.getElementById("quizResult").classList.add("hidden");document.getElementById("quizPlay").classList.remove("hidden");renderQuestion();
+ current=0;
+ score=0;
+ correctCount=0;
+ document.getElementById("quizResult").classList.add("hidden");
+ document.getElementById("quizPlay").classList.remove("hidden");
+ renderQuestion();
 });
+
 renderQuestion();
 
-/* Animasi elemen saat masuk layar */
-const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target)}}),{threshold:.12});
+// ======================================
+// ANIMASI SAAT ELEMEN MASUK LAYAR
+// ======================================
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(entry=>{
+  if(entry.isIntersecting){
+   entry.target.classList.add("visible");
+   observer.unobserve(entry.target);
+  }
+ });
+},{threshold:.12});
+
 document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
 
-/* Penanda menu aktif */
+// ======================================
+// PENANDA MENU AKTIF
+// ======================================
 const sections=[...document.querySelectorAll("main section[id]")];
-const navObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
-  if(entry.isIntersecting){document.querySelectorAll(".links a").forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+entry.target.id))}
-}),{rootMargin:"-35% 0px -55% 0px"});
+
+const navObserver=new IntersectionObserver(entries=>{
+ entries.forEach(entry=>{
+  if(entry.isIntersecting){
+   document.querySelectorAll(".links a").forEach(a=>{
+    a.classList.toggle(
+     "active",
+     a.getAttribute("href")==="#"+entry.target.id
+    );
+   });
+  }
+ });
+},{rootMargin:"-35% 0px -55% 0px"});
+
 sections.forEach(s=>navObserver.observe(s));
 </script>
+
 </body>
 </html>
